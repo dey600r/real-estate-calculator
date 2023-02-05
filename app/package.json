@@ -10,8 +10,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:test-android": "ionic capacitor run android --debug",
-    "deploy:debug-android": "ionic capacitor run android --debug -l --address=192.168.1.21"
+    "bundle-android": "ionic capacitor build android --release --prod --no-open && ./android/gradlew bundle",
+    "release-android": "ionic capacitor build android --release --prod --no-open && ./android/gradlew assembleRelease",
+    "test-android": "ionic capacitor run android --debug",
+    "dey-debug-android": "ionic capacitor run android --debug -l --host=192.168.1.21 --target=52006e004fdb4629",
+    "ana-debug-android": "ionic capacitor run android --debug -l --host=192.168.1.21 --target=52006e004fdb4629"
   },
   "private": true,
   "dependencies": {
